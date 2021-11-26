@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/pins");
+        const res = await axios.get("https://travelpinapplication.herokuapp.com/api/pins");
         setPins(res.data);
       } catch (error) {
         console.log(error);
@@ -60,7 +60,7 @@ function App() {
       long: newPlace.long,
     };
     try {
-      const res = await axios.post("http://localhost:8000/api/pins", newPin);
+      const res = await axios.post("https://travelpinapplication.herokuapp.com/api/pins", newPin);
       setPins([...pins, res.data]);
       setnwePlace(null);
     } catch (error) {

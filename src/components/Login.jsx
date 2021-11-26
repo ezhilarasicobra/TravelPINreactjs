@@ -16,7 +16,7 @@ export default function Login({ setShowLogin,storage,setCurrentuser}) {
     };
 
     try {
-     const res= await axios.post("/users/login", user);
+     const res= await axios.post("https://travelpinapplication.herokuapp.com/users/login", user);
       storage.setItem("user",res.data.username)
       setCurrentuser(res.data.username)
       setShowLogin(false)

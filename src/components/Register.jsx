@@ -19,7 +19,7 @@ export default function Register({ setShowRegister }) {
     };
 
     try {
-      await axios.post("/users/register", newUser);
+      await axios.post("https://travelpinapplication.herokuapp.com/users/register", newUser);
       setError(false);
       setSuccess(true);
     } catch (err) {
